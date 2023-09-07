@@ -6,40 +6,39 @@ public class LearningHowToProgram : MonoBehaviour
 {
     private void Start()
     {
+        float health = 101;
 
-        //CalculateTwoNumbers();
-        //CalculateUnknownNumbers(30, 22);
+        switch (health)
+        {
+            case 100:
+                Debug.Log("Health is 100");
+                break;
 
-        //float sum = returnTwoNumbers();
-        //Debug.Log("The sum is: " + sum);
+            case 50:
+                Debug.Log("Health is 50");
+                break;
 
-        Debug.Log($"The sum is: {CalculateSum(10, 20)}");
+            case 0:
+                Debug.Log("Health is 0");
+                break;
 
+            default:
+                Debug.Log("Healt is neighter of the value above");
+                break;
+        }
+
+        //if (health == 0)
+        //{
+        //    // if health is less than zero, then condition is true
+        //    // code that is here, will be executed
+        //    Debug.Log("Health is 0 player has died");
+        //}else if (health < 50)
+        //{
+        //    Debug.Log("Health is less than 50 unlock some power for player");
+        //}
+        //else
+        //{
+        //    Debug.Log("Player has health greater than 50");
+        //}
     }
-
-    // a function that doesn't return a value and doesn't take parameters
-    void CalculateTwoNumbers()
-    {
-        float a = 20;
-        float b = 7;
-        float c = a + b;
-        Debug.Log($"The sum of {a} and {b} is: {c}");
-    }
-
-    // a function that doesn't return a value but takes parameters
-    void CalculateUnknownNumbers(float a, float b)
-    {
-        Debug.Log($"The sum of {a} and {b} is: {a + b}");
-    }
-
-    float returnTwoNumbers()
-    {
-        return 20 + 30;
-    }
-
-    float CalculateSum(float a, float b)
-    {
-        return (a + b);
-    }
-
 } // class
