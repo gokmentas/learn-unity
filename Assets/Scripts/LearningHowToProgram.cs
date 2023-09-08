@@ -4,15 +4,19 @@ using UnityEngine;
 
 public class LearningHowToProgram : MonoBehaviour
 {
+    Player warrior;
+    Player archer;
+
+
     private void Start()
     {
        
-        Player warrior = new Player(1, 2, "Lizard");
-        Player archer = new Player(20, 30, "Archer");
+        warrior = new Player(1, 2, "Lizard"); 
 
-        warrior.Info();
-        archer.Info();
-        archer.Attack();
+        warrior.Health = 50;
+
+        Debug.Log($"Health is {warrior.Health}");
+
 
     }
 
