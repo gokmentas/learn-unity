@@ -6,17 +6,16 @@ public class LearningHowToProgram : MonoBehaviour
 {
     private void Start()
     {
-        StartCoroutine(ExecuteSomething(2));
+       
+        Player warrior = new Player(1, 2, "Lizard");
+        Player archer = new Player(20, 30, "Archer");
 
-        StartCoroutine("ExecuteSomething");
-        StopCoroutine("ExecuteSomething");
+        warrior.Info();
+        archer.Info();
+        archer.Attack();
+
     }
 
-    IEnumerator ExecuteSomething(float time)
-    {
-        yield return new WaitForSeconds(time);
-
-        Debug.Log("Something is executed");
-    }
+       
 
 } // class
