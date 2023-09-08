@@ -19,26 +19,50 @@ public class Player
         }
     }
 
-    private int power;
-    private string name;
+    private int _power;
+
+    public int Power
+    {
+        get
+        {
+            return _power;
+        }
+        set
+        {
+            _power = value;
+        }
+    }
+
+    private string _name;
+
+    public string Name
+    {
+        get { return _name; }
+        set { _name = value; }
+    }
+
+    public Player()
+    {
+
+    }
 
     public Player(int health, int power, string name)
     {
         Health = health;
-        this.power = power;
-        this.name = name;
+        Power = power;
+        Name = name;
     }
 
-    public void Attack()
+    public virtual void Attack()
     {
-        Debug.Log($"{name} is atacking.");
+        Debug.Log("Player is atacking.");
     }
 
     public void Info()
     {
-        Debug.Log($"Health is: {_health}");
-        Debug.Log($"power is: {power}");
-        Debug.Log($"name is: {name}");
+        Debug.Log($"Health is: {Health}");
+        Debug.Log($"power is: {Power}");
+        Debug.Log($"name is: {Name}");
     }
 
     //public void SetHealth( int health)

@@ -4,22 +4,35 @@ using UnityEngine;
 
 public class LearningHowToProgram : MonoBehaviour
 {
-    Player warrior;
-    Player archer;
 
+    // awake is the first function that is called
 
+    private void Awake()
+    {
+        
+    }
+
+    // 2nd function called
+    private void OnEnable()
+    {
+        
+    }
+
+    // 3rd function called
     private void Start()
     {
-       
-        warrior = new Player(1, 2, "Lizard"); 
+      
+        //Warrior warior = new Warrior(3, 5, "Warrior");
 
-        warrior.Health = 50;
-
-        Debug.Log($"Health is {warrior.Health}");
-
+        //warior.Attack();
 
     }
 
-       
+    private void Update()
+    {
+        
+    }
+
+
 
 } // class
