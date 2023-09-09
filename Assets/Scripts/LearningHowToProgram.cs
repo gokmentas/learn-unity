@@ -5,34 +5,27 @@ using UnityEngine;
 public class LearningHowToProgram : MonoBehaviour
 {
 
-    // awake is the first function that is called
+    private Rigidbody body;
+    private BoxCollider2D boxCollider;
+    private AudioSource audioSource;
+    private Animator animator;
+    private Transform trans;
 
-    private void Awake()
-    {
-        
-    }
-
-    // 2nd function called
-    private void OnEnable()
-    {
-        
-    }
-
-    // 3rd function called
     private void Start()
     {
-      
-        //Warrior warior = new Warrior(3, 5, "Warrior");
 
-        //warior.Attack();
+        body = GetComponent<Rigidbody>();
+
+        audioSource = GetComponent<AudioSource>();
+        audioSource.Play();
+
+        animator = GetComponent<Animator>();
+
+        trans = transform;
+
+        trans.position = new Vector3(10, 20, 30);
 
     }
-
-    private void Update()
-    {
-        
-    }
-
 
 
 } // class
