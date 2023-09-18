@@ -20,9 +20,10 @@ public class Receiver : MonoBehaviour
         Sender.playerDiedInfo -= PlayerDiedListener;
     }
 
-    void PlayerDiedListener()
+    float PlayerDiedListener(Vector3 player, Vector3 target)
     {
-        print("Event has called this function to execute");
+        print("Function is called. Distance is " + Vector3.Distance(player, target));
+        return Vector3.Distance(player, target);
     }
 
 }
