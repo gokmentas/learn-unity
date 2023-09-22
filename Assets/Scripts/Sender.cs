@@ -25,6 +25,7 @@ public class Sender : MonoBehaviour
         if (playerDiedInfo != null)
         {
             playerDiedInfo(new Vector3(1f, 1f, 1f), new Vector3(2f, 2f, 2f));
+            
         }
     }
 
